@@ -1,6 +1,6 @@
 # AIWF: AI for Weather Forecasting Codebase
 
-[![AIWx](https://img.shields.io/badge/Gropu-AIWx-009688.svg)](https://github.com/198808xc/Pangu-Weather)  ![AIWx Research](https://img.shields.io/badge/Research_Focus-AI4Weather-0077b6.svg)
+[![AIWx](https://img.shields.io/badge/Gropu-AIWx-009688.svg)](https://github.com/198808xc/Pangu-Weather)  ![AIWx Research](https://img.shields.io/badge/Research_Focus-AI4Weather-0077b6.svg) [![Academic Partnership](https://img.shields.io/badge/Academic_Collaboration-Open-8a2be2.svg)](https://aiwx.org/collaborate)
 
 ## Framework Value Proposition 
 This codebase systematically integrates and reimplements state-of-the-art meteorological AI models to advance operational workflows in weather forecasting. Developed by AIWx, the framework provides:
@@ -35,3 +35,8 @@ This codebase systematically integrates and reimplements state-of-the-art meteor
 ## Technical References & Acknowledgments
 Core architecture derived from the pioneering work of:  
 - [Pangu-Weather Official Implementation](https://github.com/198808xc/Pangu-Weather)
+
+## Contact us
+For technical inquiries or collaborative research opportunities in AI-driven meteorology, please direct your correspondence to:
+- Kaixin Chen (chenkaixin@bupt.edu.cn | Beijing University of Posts and Telecommunications)
+
