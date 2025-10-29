@@ -32,6 +32,42 @@ This codebase systematically integrates and reimplements state-of-the-art meteor
   - Model architecture: 3D Earth-specific transformer blocks
   - Training framework: Weighted RMSE loss function
 
+### [2025-10-28]
+
+#### Added
+- Reference forecast evaluation system
+  - `tools/reference_forecasts/`: Modular baseline forecasting methods
+    - Persistence, Climatology, Weekly Climatology
+  - `tools/improved_metrics.py`: Flexible metrics with configurable data dimensions
+  - Comprehensive evaluation pipeline for model benchmarking
+
+## Reference Forecasts
+
+The `reference_forecasts` module provides standard baseline methods for evaluating AI weather models. These methods quantify model skill improvement over conventional forecasting approaches.
+
+**Available Methods:**
+- **Persistence**: Assumes unchanged weather state (baseline for short-range forecasts)
+- **Climatology**: Historical mean-based forecasting (baseline for long-range)
+- **Weekly Climatology**: Seasonal-aware climatological forecasts
+
+**Key Features:**
+- Configurable data dimensions (C, H, W) for different datasets
+- Latitude-weighted evaluation metrics (RMSE, MAE, ACC, Bias)
+- Automated comparison against AI model predictions
+
+**Quick Example:**
+```python
+from src.tools.reference_forecasts import Persistence
+from src.tools.improved_metrics import WeatherMetrics, DataConfig
+
+config = DataConfig.from_pangu()  # C=69, H=721, W=1440
+persistence = Persistence()
+metrics = WeatherMetrics(config)
+
+predictions = persistence((input_air, input_surface), n_steps=20)
+rmse = metrics.compute_rmse(predictions, targets)
+```
+
 ## Technical References & Acknowledgments
 Core architecture derived from the pioneering work of:  
 - [Pangu-Weather Official Implementation](https://github.com/198808xc/Pangu-Weather)
